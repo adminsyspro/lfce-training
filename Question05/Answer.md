@@ -13,7 +13,7 @@ REDIRECT使った版
 iptables -t nat -A PREROUTING -i nat1 -p tcp --dport 443 -j REDIRECT --to-port 22022
 ```
 
-DNAT
+DNAT (si 10.0.0.1 est l'IP de l'interface entrante)
 
 ```
 iptables -t nat -A PREROUTING -i nat1 -p tcp --dport 443 -j DNAT --to-destination 10.0.0.1:22022
